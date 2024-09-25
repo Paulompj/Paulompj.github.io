@@ -13,12 +13,70 @@
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <title>Portfólio | Paulo Moraes</title>
     <style>
-        /* Novas cores aplicadas */
         body {
-            background-color: #34495E; /* Azul petróleo */
-            color: #ECECEC; /* Cinza claro para o texto */
+            background-color: #34495E;
+            color: #ECECEC;
             font-family: 'Poppins', sans-serif;
         }
+
+        /* Habilidades */
+        .habilidades {
+            background-color: #34495E; 
+            color: #34495E; 
+            padding: 50px 0;
+        }
+
+        .habilidades-content {
+            display: flex;
+            justify-content: space-between; /* Ajustado para melhor distribuição */
+            flex-wrap: wrap;
+            padding: 0 20px; /* Adicionado padding para evitar que toquem nas bordas */
+        }
+
+        .habilidade-card {
+            background-color: #FFFFFF; 
+            border: 1px solid #34495E; 
+            width: calc(33.33% - 20px); /* Ajusta a largura considerando margens */
+            padding: 20px;
+            margin: 10px; /* Diminuído o espaçamento */
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            transition: transform 0.3s; /* Adicionada animação ao hover */
+        }
+
+        .habilidade-card:hover {
+            transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+        }
+
+        .habilidade-card h2 {
+            color: #FF6F61; 
+            margin-bottom: 15px;
+        }
+
+        .habilidade-card p {
+            color: #34495E; 
+        }
+
+        .habilidade-card i {
+            font-size: 40px;
+            margin-bottom: 15px;
+            color: #4A90E2; 
+        }
+
+        @media (max-width: 768px) {
+            .habilidade-card {
+                width: calc(50% - 20px); /* 50% em telas menores */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .habilidade-card {
+                width: 100%; /* 100% em telas pequenas */
+                margin: 10px 0; /* Margem vertical em telas pequenas */
+            }
+        }
+        /* Novas cores aplicadas */
         
         /* Menu */
         header.menu {
@@ -184,7 +242,7 @@
                 <i class="ph ph-arrow-circle-down"></i>
             </a>
         </div>
-        <img class="start-perfil" src="" alt="">
+        <img class="start-perfil" src="11zon_cropped.png" alt="Perfil">
     </section>
 
     <!-- Trabalhos Section -->
@@ -212,7 +270,7 @@
             <!-- Card 2 -->
             <article class="card">
                 <img src="logoagua.jpg" height="300px" alt="">
-                <p class="card-language">Java AndroidStudio FireBase MySQL</p>
+                <p class="card-language">Java AndroidStudio FireBase</p>
                 <div class="card-content">
                     <h1 class="card-title">Midianet</h1>
                     <p class="card-text">Aplicativo Mobile para gerenciar sua ingestão diária de água</p>
