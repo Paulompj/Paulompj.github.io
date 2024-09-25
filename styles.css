@@ -1,0 +1,829 @@
+body {
+    font-family: 'Fira Code', monospace !important;
+    background: var(--bg-gray);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg-gray: #282C33;
+    --white-primary: #fff;
+    --gray-tertiary: #ABB2BF;
+    --gray-secondary: #d6dde0;
+    --pink-primary: #C778DD;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 75px;
+}
+
+p {
+    align-self: flex-end;
+    font-family: 'Fira Code';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--gray-tertiary);
+}
+ 
+
+/* Menu */
+.menu {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 32px;
+    box-sizing: border-box;
+    background: var(--bg-gray);
+    z-index: 1;
+}
+
+.menu-nav_on {
+    display: grid;
+    grid-template-columns: 2fr;
+    grid-template-rows: auto 1fr auto;
+    flex-direction: column;
+    position: fixed;
+    height: calc(100vh - 72px);
+    width: 70%;
+    right: 0px;
+    top: 0px;
+    justify-content: start;
+    box-sizing: border-box;
+    z-index: 2;
+    padding: 32px;
+
+    background: var(--bg-gray);
+    > ul {
+        display: flex !important;
+        padding-block: 32px;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 70%;
+        font-size: 24px;
+        
+        > li::before {
+            content: "#";
+            color: var(--pink-primary);
+        }
+
+        > li a {
+            text-decoration: none;
+            color: var(--gray-tertiary); ;
+        }
+    }
+
+    > nav {
+        justify-self: center;
+        display: flex !important;
+        gap: 12px;
+    
+        > a {
+            color: var(--gray-tertiary);
+            text-decoration: none;
+
+    
+            > i {
+                font-size: 32px;
+            }
+        }
+    }
+}
+
+.menu-nav {
+    > ul {
+        display: none;
+    }
+    > nav {
+        display: none;
+    }
+}
+
+.menu-icon {
+    font-size: 2rem;
+    color: var(--white-primary)
+}
+
+
+
+
+.start, .trabalhos, .habilidades, .beneficios, .contato, .footer, .frase {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-inline: 32px;
+    box-sizing: border-box;
+}
+
+/* Start */
+.start {
+    height: 100vh;
+    padding-block: calc(81px + 25px) 25px;
+    gap: 24px;
+    justify-content: center;
+}
+
+.start-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 12px;
+    width: 100%;
+    
+    > h1 {
+        font-size: 24px;
+        line-height: 31px;
+        color: var(--white-primary);
+        > span {
+            color: var(--pink-primary);
+        }
+    }
+
+    > a {
+        display: none;
+    }
+}
+
+.start-perfil {
+    width: 100%;
+    margin: auto;
+}
+
+/* Frase */
+.frase {
+    width: 100%;
+    padding-block: 75px;
+    box-sizing: border-box;
+}
+
+/* Trabalhos */
+.trabalhos {
+    gap: 24px;
+}
+
+.trabalhos-content { 
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.title {
+    width: 100%;
+    display: flex;
+    gap: 12px ;
+    align-items: center;
+    > h1 {
+        font-size: 22px;
+        color: var(--white-primary);
+    }
+
+    > h1::before {
+        content: '#';
+        color: var(--pink-primary);
+    }
+
+    > hr {
+        flex-grow: 1;
+        height: 2px;
+        border: none;
+        background: var(--pink-primary);
+    }
+}
+
+.button {
+    padding: 8px 18px;
+    color: var(--white-primary);
+    background: var(--pink-primary);
+    border: 1px solid var(--white-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    align-self: flex-end;
+    font-family: 'Fira Code';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.button:hover {
+    cursor: pointer;
+    filter: brightness(1.2);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-language {
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    color: var(--gray-tertiary);
+    padding: 8px;
+    border: 1px solid var(--gray-tertiary);
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--gray-tertiary);
+    padding: 8px;
+    gap: 16px;
+}
+
+.card-image {
+    width: 100%;
+}
+
+.card-title {
+    color: var(--white-primary);
+    font-size: 22px;
+}
+
+.card-text {
+    color: var(--gray-tertiary);
+}
+
+.card-button {
+    display: flex;
+    gap: 4px;
+    box-sizing: border-box;
+    border: 1px solid var(--pink-primary);
+    padding: 8px;
+    width: fit-content;
+    color: var(--white-primary);
+    font-size: 16px;
+    text-decoration: none;
+    transition: 1s;
+}
+
+.card-button:hover {
+    background: var(--pink-primary);
+}
+
+
+
+/* Habilidades */
+.habilidades {
+    gap: 24px ;
+}
+
+.habilidades-content {
+    display: flex;
+    justify-content: space-between;
+
+    > img {
+        display: none;
+    }
+}
+
+.boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    flex-grow: 1;
+}
+
+.box-title {
+    border: 1px solid var(--gray-tertiary);
+    color: var(--white-primary);
+    font-size: 16px;
+    padding: 8px;
+}
+
+.box-content {
+    display: flex;
+    border: 1px solid var(--gray-tertiary);
+}
+
+.content-table {
+    > li {
+        display: flex;
+        padding: 8px;
+        color: var(--gray-tertiary);
+    }
+}
+
+/* Beneficios */
+.beneficios {
+    gap: 12px;
+
+    > img {
+        width: 70%;
+        margin: auto;
+    }
+
+}
+
+.beneficios-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    > h1 {
+        font-size: 22px;
+        color: var(--white-primary);
+        margin: auto;
+    }
+
+    > h1::before {
+        content: '#';
+        color: var(--pink-primary);
+    }
+}
+
+.content-text {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: start;
+
+    > li {
+        color: var(--gray-tertiary);
+        list-style: disc outside;
+        margin-left: 18px;
+        box-sizing: border-box;
+        line-height: 18px;
+
+        > strong {
+            font-weight: 600;
+            color: var(--pink-primary);
+        }
+    }
+}
+
+/* Contato */
+.contato {
+    gap: 24px;
+}
+
+.contato-text {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contato-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--gray-tertiary);
+    padding: 16px;
+    gap: 16px;
+
+    > h1 {
+        color: var(--white-primary);
+        font-size: 18px;
+    }
+}
+
+.card-links{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    > a {
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--gray-tertiary);
+        text-decoration: none;
+
+        :hover {
+            cursor: pointer;
+        }
+
+        > i {
+            font-size: 26px;
+        }
+    }    
+}
+
+/* Footer */
+.footer {
+    gap: 16px;
+    > hr {
+        width: 100%;
+        border: none;
+        height: 2px;
+        background: var(--gray-tertiary);
+    }
+
+    > p {
+        margin-bottom: 8px;
+        text-align: center;
+    }
+}
+
+.footer-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    > a {
+        color: var(--white-primary);
+        font-size: 14px;
+        text-decoration: none;
+    }
+}
+
+.footer-content {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 20px;
+
+    > h2 {
+        text-align: center;
+        font-size: 24px;
+        color: var(--white-primary);
+    }
+}
+
+.footer-links {
+    display: flex;
+    gap: 12px;
+
+    > a {
+        color: var(--gray-tertiary);
+        text-decoration: none;
+        
+
+        > i {
+            font-size: 32px;
+        }
+    }
+}
+
+.copyright {
+    color: var(--gray-tertiary);
+    font-size: 12px;
+}
+
+
+@media screen and (min-width: 450px ) {
+    .start-perfil {
+        width: 85%;
+        max-width: 380px;
+    }
+}
+
+@media screen and (min-width: 768px ) {
+    main {
+        gap: 100px;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .button {
+        padding: 16px;
+    }
+
+    .trabalhos, .habilidades, .contato, .beneficios-content {
+        gap: 32px;
+    }
+
+    .title{
+        > h1 {
+            font-size: 26px;
+        }
+    }
+    
+    .menu-nav {
+        width: 65%;
+
+        > i {
+            display: none;
+        }
+
+        > ul {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            > li {
+                > a {
+                    text-decoration: none;
+                    color: var(--white-primary);
+                }
+            }
+
+            > li::before {
+                content: "#";
+                color: var(--pink-primary);
+            }
+        }
+    }
+
+    .start {
+        flex-direction: row;
+        height: auto;
+        gap: 12px;
+        justify-content: space-between;
+        
+    }
+
+    .start-content {
+        justify-content: center;
+
+        > h1 {
+            font-size: 28px;
+        }
+
+        > a {
+            margin-top: 20px;
+            display: flex;
+            text-decoration: none;
+            align-self: flex-start;
+        }
+    }
+
+    .start-perfil {
+        width: 45%;
+        max-width: unset;
+    }
+
+
+    /*  Trabalhos */
+    .trabalhos-content {
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        > button {
+            align-self: center;
+            margin: auto;
+        }
+    }
+
+    .card {
+        max-width: 48.2%;
+    }
+
+    .card-button {
+        padding: 16px;
+        font-size: 18px;
+    }
+
+    /* Habilidades */
+    .habilidades-content {
+        align-items: center;
+
+        > img {
+            display: flex;
+            width: 32%;
+            height: 70%;
+        }
+    }
+
+    .boxes {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        gap: 24px;
+    }
+
+    /* Beneficios */
+    .beneficios {
+        flex-direction: row;
+        justify-content: space-between;
+
+        > img {
+            width: 35%;
+        }
+    }
+
+    .beneficios-content {
+        > h1 {
+            font-size: 26px;
+            margin: unset;
+        }
+    }
+
+    /* Contato */
+    .contato {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .contato-card {
+        width: 42.8%;
+    }
+
+    .footer {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas: 
+                            "line line"
+                            "title media"
+                            "text media"
+                            "signature signature";
+
+        > hr {
+            grid-area: line;
+        }
+
+        > p {
+            grid-area: text;
+            text-align: start;
+            margin-bottom: 32px;
+        }
+
+        .copyright {
+            grid-area: signature;
+            text-align: center;
+            margin-bottom: 12px;
+        }
+    }
+
+    .footer-title {
+        grid-area: title;
+        width: auto;
+        justify-content: start;
+        gap: 24px;
+    }
+
+    .footer-content {
+        grid-area: media;
+    }
+
+    .copyright {
+        grid-area: signature;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    .button, .card-button {
+        padding: 16px 24px;
+    }
+
+    .start, .trabalhos, .habilidades, .beneficios, .contato, .footer, .frase, .menu {
+        padding-inline: 64px ;
+    }
+
+    .trabalhos, .habilidades, .contato, .beneficios-content {
+        gap: 48px;
+    }
+
+    .menu-nav {
+        width: 60%;
+
+        > ul {
+            > li {
+                font-size: 18px;
+            }
+        }
+    }
+
+    /* Inicio */
+    .start {
+        justify-content: space-between;
+    }
+
+    .start-content {
+        width: 48%;
+
+        > h1 {
+            font-size: 32px;
+            line-height: 38px;
+        }
+    }
+
+    .start-perfil {
+        width: 40%;
+        margin: unset;
+    }
+
+    /* Frase */
+    .frase {
+        width: 70%;
+        margin: auto;
+        padding-block: 150px ;
+    }
+
+    /* Trabalhos */
+    .card {
+        width: 100%;
+        max-width: unset;
+
+        > img {
+            width: 100%;
+        }
+    }
+
+    .card:nth-child(1) {
+        grid-area: card-1;
+    }
+
+    .card:nth-child(2) {
+        grid-area: card-2;
+    }
+
+    .card:nth-child(3) {
+        grid-area: card-3;
+    }
+    
+    .trabalhos-content {
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas: 
+                            "card-1 card-2 card-3"
+                            "vazio vazio button";
+        > button {
+            margin: unset;
+            grid-area: button;
+        }
+    }
+
+    /* Habilidades */
+    .boxes {
+        gap: 32px;
+    }
+
+    /* Beneficios */
+    .beneficios {
+        justify-content: space-between;
+
+        > img {
+            margin: unset;
+        }
+    }
+
+    .beneficios-content {
+        width: 55%;
+    }
+
+    .content-text {
+        gap: 24px;
+    }
+
+    /* Contato */
+    .contato {
+        display: grid;
+        grid-template-columns: 1fr repeat(2, auto);
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas: 
+                            "contato contato contato"
+                            "contato-text contate redes";
+        gap: 24px;
+
+        > .title {
+            grid-area: contato;
+            margin-bottom: 24px;
+        }
+    }
+
+    .contato-text {
+        grid-area: contato-text;
+    }
+
+    .contato-card {
+        width: fit-content;
+        height: fit-content;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .start, .trabalhos, .habilidades, .beneficios, .contato, .footer, .frase, .menu {
+        padding-inline: 128px ;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .start, .trabalhos, .habilidades, .beneficios, .contato, .footer, .frase, .menu {
+        padding-inline: 190px ;
+    }
+
+    .start {
+        height: 100vh;
+        padding-block: none;
+
+        > img {
+            margin-block: auto;
+        }
+    }
+}

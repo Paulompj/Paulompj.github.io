@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/img/icon.png">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Fira+Code&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <title>Portfólio | Paulo Moraes</title>
+    <style>
+        /* Novas cores aplicadas */
+        body {
+            background-color: #34495E; /* Azul petróleo */
+            color: #ECECEC; /* Cinza claro para o texto */
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        /* Menu */
+        header.menu {
+            background-color: #4A90E2; /* Azul-claro */
+        }
+        
+        .menu a {
+            color: #FFFFFF; /* Branco para o texto */
+        }
+        
+        /* Hero Section */
+        .start {
+            background-color: #34495E; /* Azul petróleo */
+            color: #FFFFFF; /* Branco */
+        }
+
+        .start h1 span {
+            color: #FF6F61; /* Coral suave para o destaque */
+        }
+
+        .start .button {
+            background-color: #FF6F61; /* Coral suave */
+            color: #FFFFFF;
+        }
+
+        /* Cards de Trabalhos */
+        .trabalhos .card {
+            background-color: #FFFFFF; /* Branco para destacar os cards */
+            color: #34495E; /* Texto azul petróleo */
+        }
+
+        .trabalhos .card-button {
+            background-color: #4A90E2; /* Azul-claro */
+            color: #FFFFFF; /* Texto branco nos botões */
+        }
+
+        .trabalhos .card p {
+            color: #34495E; /* Texto em azul petróleo */
+        }
+
+        /* Habilidades */
+        .habilidades {
+            background-color: #34495E; /* Cinza claro */
+            color: #34495E; /* Texto em azul petróleo */
+            padding: 50px 0;
+        }
+
+        .habilidades-content {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .habilidade-card {
+            background-color: #FFFFFF; /* Cards brancos */
+            border: 1px solid #34495E; /* Borda leve azul petróleo */
+            width: 30%;
+            padding: 20px;
+            margin: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .habilidade-card h2 {
+            color: #FF6F61; /* Coral suave para o título */
+            margin-bottom: 15px;
+        }
+
+        .habilidade-card p {
+            color: #34495E; /* Texto em azul petróleo */
+        }
+
+        .habilidade-card i {
+            font-size: 40px;
+            margin-bottom: 15px;
+            color: #4A90E2; /* Azul claro para os ícones */
+        }
+
+        /* Seção de Contato */
+        .contato {
+            background-color: #FF6F61; /* Coral suave */
+            color: #FFFFFF; /* Texto branco */
+            padding: 50px 0;
+        }
+
+        .contato-content {
+            text-align: center;
+        }
+
+        .contato p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .contato .button {
+            background-color: #34495E; /* Azul petróleo */
+            color: #FFFFFF; /* Texto branco */
+            padding: 10px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .contato .button:hover {
+            background-color: #4A90E2; /* Azul-claro no hover */
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #34495E; /* Azul petróleo */
+            color: #ECECEC; /* Cinza claro */
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer a {
+            color: #4A90E2; /* Azul-claro para os links */
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Menu Header -->
+    <header class="menu">
+        <h1 class="menu-logo"><img src="" alt=""></h1>
+        <nav id="menu" class="menu-nav">
+            <i id="menuIcon" class="ph ph-list menu-icon"></i>
+            <ul>
+                <li><a href="#start">Home</a></li>
+                <li><a href="#trabalhos">Trabalhos</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+            <nav id="redes" class="links">
+                <a href="https://instagram.com/seu-instagram">
+                    <i class="ph ph-instagram-logo"></i>
+                </a>
+                <a href="https://linkedin.com/in/seu-linkedin">
+                    <i class="ph ph-linkedin-logo"></i>
+                </a>
+                <a href="https://github.com/seu-github">
+                    <i class="ph ph-github-logo"></i>
+                </a>
+            </nav>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="start" class="start">
+        <div class="start-content">
+            <h1>Olá! sou Paulo Moraes, <span>Desenvolvedor de Software Full-Stack</span></h1>
+            <p>Transformo suas ideias em soluções digitais inovadoras e eficientes.</p>
+            <a class="button" href="#trabalhos">
+                Confira Abaixo
+                <i class="ph ph-arrow-circle-down"></i>
+            </a>
+        </div>
+        <img class="start-perfil" src="11zon_cropped.png" alt="Perfil">
+    </section>
+
+    <!-- Trabalhos Section -->
+    <section id="trabalhos" class="trabalhos">
+        <div class="title">
+            <h1>Trabalhos</h1>
+            <hr>
+        </div>
+
+        <div class="trabalhos-content">
+            <!-- Card 1 -->
+            <article class="card">
+                <img src="sismaf2.png" height="300px" alt="Imagem Seurl">
+                <p class="card-language">HTML, CSS, Javascript, Fastify, Vite.js, Prisma</p>
+                <div class="card-content">
+                    <h1 class="card-title">Seurl</h1>
+                    <p class="card-text">Gerador de URLs, QRCodes e páginas de links.</p>
+                    <a class="card-button" href="">
+                        Navegar
+                        <i class="ph ph-arrow-circle-right"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="card">
+                <video class="card-image" src="midianet-video.mkv" autoplay loop></video>
+                <p class="card-language">HTML, CSS, Javascript, Bootstrap</p>
+                <div class="card-content">
+                    <h1 class="card-title">Midianet</h1>
+                    <p class="card-text">Site responsivo para um provedor de internet.</p>
+                    <a class="card-button" target="_blank" href="https://eduardonogueiradev.github.io/midianet/">
+                        Navegar
+                        <i class="ph ph-arrow-circle-right"></i>
+                    </a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Habilidades Section -->
+    <section id="habilidades" class="habilidades">
+        <div class="title">
+            <h1>Habilidades</h1>
+            <hr>
+        </div>
+
+        <div class="habilidades-content">
+            <article class="habilidade-card">
+                <i class="ph ph-code"></i>
+                <h2>Desenvolvimento Web</h2>
+                <p>Experiência com desenvolvimento front-end e back-end, utilizando HTML, CSS, JavaScript, e frameworks como React e Angular.</p>
+            </article>
+
+            <article class="habilidade-card">
+                <i class="ph ph-server"></i>
+                <h2>Desenvolvimento de APIs</h2>
+                <p>Criação de APIs RESTful utilizando Node.js, Express e integração com bancos de dados MySQL e MongoDB.</p>
+            </article>
+
+            <article class="habilidade-card">
+                <i class="ph ph-git-branch"></i>
+                <h2>Controle de Versão</h2>
+                <p>Proficiência em Git e GitHub para controle de versão e colaboração em equipe em projetos de software.</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- Contato Section -->
+    <section id="contato" class="contato">
+        <div class="contato-content">
+            <h1>Entre em contato</h1>
+            <p>Interessado em desenvolver algo incrível? Vamos conversar!</p>
+            <a class="button" href="mailto:seu-email@dominio.com">
+                Enviar e-mail
+                <i class="ph ph-envelope"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2023 Paulo Moraes</p>
+        <nav>
+            <a href="https://github.com/PauloMoraes">GitHub</a>
+            <a href="https://linkedin.com/in/paulo-moraes">LinkedIn</a>
+            <a href="mailto:contato@paulo.com">Email</a>
+        </nav>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuIcon = document.getElementById('menuIcon');
+            const menuList = document.getElementById('menuList');
+
+            menuIcon.addEventListener('click', function() {
+                menuList.classList.toggle('active'); // Adiciona ou remove a classe 'active'
+            });
+        });
+    </script>
+
+</body>
+</html>
